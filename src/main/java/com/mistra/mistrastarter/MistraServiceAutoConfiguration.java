@@ -23,7 +23,7 @@ public class MistraServiceAutoConfiguration {
     @Autowired
     private MistraServiceProperties mistraServiceProperties;
 
-    @Bean
+    @Bean(name = "mistraService")
     @ConditionalOnMissingBean(MistraService.class)//当容器中没有这个Bean时(MistraService)就自动配置这个Bean，Bean的参数来自于MistraServiceProperties
     public MistraService mistraService(){
         MistraService mistraService = new MistraService();

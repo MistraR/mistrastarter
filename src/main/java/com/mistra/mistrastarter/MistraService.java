@@ -9,7 +9,7 @@ public class MistraService {
 
     private String name;
 
-    private String sayYourName(){
+    public String sayYourName(){
         return "I'm " + name + "! ";
     }
 
